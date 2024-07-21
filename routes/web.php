@@ -17,11 +17,8 @@ Route::group(['middleware' => ['auth']], function () {
   Route::get('/profile', 'ProfileController@show');
   Route::put('/profile/{id}', 'ProfileController@update');
 
-  //data registrasi
+  //data laporan
   Route::get('/laporan_registrasi', 'LaporanRegistrasiController@index'); 
-
-  //data obat
-  Route::get('/data_obat', 'DataObatController@index');
-  Route::put('/data_obat/{id}', 'DataObatController@update'); 
+  Route::get('/laporan_simrs', 'LaporanSimrsController@index');  
 
 });

@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="icon" href="{{ asset('images/logo.png') }}">
-        <title>{{ Session::get('nama') }}</title>
+        <title>{{ env('APP_NAME') }}</title>
 
         <!-- css-->
         <link href="{{ asset('template/css/sb-admin-2.min.css') }}" rel="stylesheet">
@@ -20,7 +20,7 @@
         
         <!-- custtom css-->
         <style type="text/css">
-            .table {font-size: 13px;}
+            .table {font-size: 12px;}
             .btn {font-size: 12px;}
             .ui-front {z-index: 9999999 !important;}
             .hiddenRow {padding: 0 !important;}
@@ -57,39 +57,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/laporan_pemeriksaan') }}">
+                    <a class="nav-link" href="{{ url('/laporan_simrs') }}">
                         <i class="fas fa-file"></i>
-                        <span>Laporan Pemeriksaan</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/laporan_diagnosa') }}">
-                        <i class="fas fa-file"></i>
-                        <span>Laporan Diagnosa</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/laporan_prosedur') }}">
-                        <i class="fas fa-file"></i>
-                        <span>Laporan Prosedur</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/laporan_tindakan_dokter') }}">
-                        <i class="fas fa-file"></i>
-                        <span>Laporan Tindakan Dokter</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/laporan_obat') }}">
-                        <i class="fas fa-file"></i>
-                        <span>Laporan Obat</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/laporan_laboratorium') }}">
-                        <i class="fas fa-file"></i>
-                        <span>Laporan Laboratorium</span>
+                        <span>Laporan SIMRS</span>
                     </a>
                 </li>
                 @endif

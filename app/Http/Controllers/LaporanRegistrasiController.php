@@ -15,8 +15,6 @@ class LaporanRegistrasiController extends Controller
         } else {
             $tanggal = $request->tanggal;
         }
-        
-        $select = $request->select;
 
         $data['registrasi'] = DB::connection('mysql2')
         ->table('reg_periksa')
@@ -34,7 +32,6 @@ class LaporanRegistrasiController extends Controller
         ->get();
 
         $data['tanggal'] = $tanggal;
-        $data['select'] = $select;
 
         return view('registrasi.index', $data);
     }
